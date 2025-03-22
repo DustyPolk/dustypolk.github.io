@@ -8,9 +8,24 @@
     <language>en-gb</language>
     <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dustypolk.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Create a LAMP Server on Raspberry Pi</title>
+      <link>https://dustypolk.github.io/posts/rpisetup/</link>
+      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://dustypolk.github.io/posts/rpisetup/</guid>
+      
+      <description>&lt;h1 id=&#34;setting-up-a-lamp-server-on-raspberry-pi-for-local-development&#34;&gt;Setting Up a LAMP Server on Raspberry Pi for Local Development&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://dustypolk.github.io/images/raspberry-pi-lamp.jpg&#34; alt=&#34;Raspberry Pi LAMP Server&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: Turn your Raspberry Pi into a powerful local web development server using Linux, Apache, MySQL, and PHP (LAMP stack). Perfect for testing projects before deploying to production.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Have you ever wanted your own web server for testing projects, but didn&amp;rsquo;t want to pay for hosting or run a power-hungry computer 24/7? A Raspberry Pi makes the perfect low-cost, energy-efficient solution!&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>First blog post</title>
       <link>https://dustypolk.github.io/posts/my-first-post/</link>
-      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://dustypolk.github.io/posts/my-first-post/</guid>
       
