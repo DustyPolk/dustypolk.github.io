@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Dusty Polk</title>
+    <link>https://hba.sid.one/pages/</link>
+    <description>Recent content in Pages on Dusty Polk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language><atom:link href="https://hba.sid.one/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://hba.sid.one/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hba.sid.one/about/</guid>
+      
+      <description>&lt;h2 id=&#34;the-man-behind-the-screen&#34;&gt;The Man Behind the Screen&lt;/h2&gt;
+&lt;p&gt;Hello there! I&amp;rsquo;m Dusty Polk, a tech enthusiast with an insatiable curiosity for how things work. My journey with technology began in childhood when I would disassemble electronics (with varying success putting them back together). That early fascination evolved into a lifelong passion for building, experimenting, and learning.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hba.sid.one/images/profile.jpg&#34; alt=&#34;Dusty Polk&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;life-beyond-the-keyboard&#34;&gt;Life Beyond the Keyboard&lt;/h2&gt;
+&lt;p&gt;When I&amp;rsquo;m not immersed in my latest project, I&amp;rsquo;m a devoted husband and proud dog dad. My amazing wife deserves endless credit for supporting my ever-growing collection of gadgets and half-finished projects. Together with our playful 4-year-old beagle Chewy, we make a happy household where technology and warmth coexist.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>https://hba.sid.one/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hba.sid.one/resume/</guid>
+      
+      <description>&lt;h1 id=&#34;dusty-polk&#34;&gt;Dusty Polk&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;SAS Administrator &amp;amp; IT Professional&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;professional-summary&#34;&gt;Professional Summary&lt;/h2&gt;
+&lt;p&gt;Dedicated SAS Administrator with experience at a managed service provider since 2020. Strong background in systems troubleshooting, automation, and scripting. Proven ability to optimize systems, resolve complex technical issues, and implement effective solutions. Passionate about continuous learning and staying current with emerging technologies.&lt;/p&gt;
+&lt;h2 id=&#34;professional-experience&#34;&gt;Professional Experience&lt;/h2&gt;
+&lt;h3 id=&#34;sas-administrator&#34;&gt;SAS Administrator&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Managed Service Provider&lt;/strong&gt; | 2020 - Present&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Administer and maintain SAS environments for multiple clients, ensuring optimal performance and reliability&lt;/li&gt;
+&lt;li&gt;Develop and implement automation solutions using Bash and Python to streamline operations&lt;/li&gt;
+&lt;li&gt;Collaborate with cross-functional teams to troubleshoot and resolve complex technical issues&lt;/li&gt;
+&lt;li&gt;Implement best practices for system security, backup, and recovery procedures&lt;/li&gt;
+&lt;li&gt;Provide technical support and guidance to end users and stakeholders&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;technical-skills&#34;&gt;Technical Skills&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Administration:&lt;/strong&gt; SAS Platform, Linux/Unix environments, Cloud services&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Programming:&lt;/strong&gt; Bash scripting, Python, SQL&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tools:&lt;/strong&gt; Git, Docker, Virtualization technologies&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Troubleshooting:&lt;/strong&gt; System diagnostics, performance optimization, root cause analysis&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cloud Services:&lt;/strong&gt; AWS environment configuration and management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;certifications&#34;&gt;Certifications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS Certified Cloud Practitioner&lt;/li&gt;
+&lt;li&gt;CompTIA Security+&lt;/li&gt;
+&lt;li&gt;CompTIA Network+&lt;/li&gt;
+&lt;li&gt;CompTIA A+&lt;/li&gt;
+&lt;li&gt;ITIL Foundation&lt;/li&gt;
+&lt;li&gt;Google IT Support Professional&lt;/li&gt;
+&lt;li&gt;LPI Linux Essentials&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Currently Pursuing:&lt;/strong&gt; Bachelor&amp;rsquo;s/Master&amp;rsquo;s in Information Technology
+&lt;strong&gt;Western Governors University (WGU)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Associate of Arts Degree&lt;/strong&gt;
+&lt;strong&gt;(St. Petersburg College)&lt;/strong&gt; | 2014&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;professional-development&#34;&gt;Professional Development&lt;/h2&gt;
+&lt;p&gt;Committed to continuous learning and staying current with industry trends through online courses, technical documentation, and participation in relevant communities.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
