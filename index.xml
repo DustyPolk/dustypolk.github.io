@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dusty Polk</title>
-    <link>https://dustypolk.github.io/</link>
+    <link>https://dustypolk.com/</link>
     <description>Recent content on Dusty Polk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dustypolk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dustypolk.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a LAMP Server on Raspberry Pi</title>
-      <link>https://dustypolk.github.io/posts/rpisetup/</link>
+      <link>https://dustypolk.com/posts/rpisetup/</link>
       <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://dustypolk.github.io/posts/rpisetup/</guid>
+      <guid>https://dustypolk.com/posts/rpisetup/</guid>
       
       <description>&lt;h1 id=&#34;setting-up-a-lamp-server-on-raspberry-pi-for-local-development&#34;&gt;Setting Up a LAMP Server on Raspberry Pi for Local Development&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://dustypolk.github.io/images/raspberry-pi-lamp.jpg&#34; alt=&#34;Raspberry Pi LAMP Server&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dustypolk.com/images/raspberry-pi-lamp.jpg&#34; alt=&#34;Raspberry Pi LAMP Server&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: Turn your Raspberry Pi into a powerful local web development server using Linux, Apache, MySQL, and PHP (LAMP stack). Perfect for testing projects before deploying to production.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Have you ever wanted your own web server for testing projects, but didn&amp;rsquo;t want to pay for hosting or run a power-hungry computer 24/7? A Raspberry Pi makes the perfect low-cost, energy-efficient solution!&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>First blog post</title>
-      <link>https://dustypolk.github.io/posts/my-first-post/</link>
+      <link>https://dustypolk.com/posts/my-first-post/</link>
       <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://dustypolk.github.io/posts/my-first-post/</guid>
+      <guid>https://dustypolk.com/posts/my-first-post/</guid>
       
       <description>&lt;h1 id=&#34;welcome-to-my-corner-of-the-internet&#34;&gt;Welcome to My Corner of the Internet!&lt;/h1&gt;
 &lt;p&gt;Hello there! I&amp;rsquo;m Dusty Polk—a dedicated husband, tech enthusiast, and dog lover. When I&amp;rsquo;m not working on my latest projects, you can find me spending time with my amazing wife or taking our playful 4-year-old beagle, Chewy, for a walk around the neighborhood.&lt;/p&gt;
@@ -37,14 +37,14 @@
     
     <item>
       <title>About Me</title>
-      <link>https://dustypolk.github.io/about/</link>
+      <link>https://dustypolk.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dustypolk.github.io/about/</guid>
+      <guid>https://dustypolk.com/about/</guid>
       
       <description>&lt;h2 id=&#34;the-man-behind-the-screen&#34;&gt;The Man Behind the Screen&lt;/h2&gt;
 &lt;p&gt;Hello there! I&amp;rsquo;m Dusty Polk, a tech enthusiast with an insatiable curiosity for how things work. My journey with technology began in childhood when I would disassemble electronics (with varying success putting them back together). That early fascination evolved into a lifelong passion for building, experimenting, and learning.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dustypolk.github.io/images/profile.jpg&#34; alt=&#34;Dusty Polk&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dustypolk.com/images/profile.jpg&#34; alt=&#34;Dusty Polk&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;life-beyond-the-keyboard&#34;&gt;Life Beyond the Keyboard&lt;/h2&gt;
 &lt;p&gt;When I&amp;rsquo;m not immersed in my latest project, I&amp;rsquo;m a devoted husband and proud dog dad. My amazing wife deserves endless credit for supporting my ever-growing collection of gadgets and half-finished projects. Together with our playful 4-year-old beagle Chewy, we make a happy household where technology and warmth coexist.&lt;/p&gt;</description>
       
@@ -52,10 +52,10 @@
     
     <item>
       <title>Resume</title>
-      <link>https://dustypolk.github.io/resume/</link>
+      <link>https://dustypolk.com/resume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dustypolk.github.io/resume/</guid>
+      <guid>https://dustypolk.com/resume/</guid>
       
       <description>&lt;h1 id=&#34;dusty-polk&#34;&gt;Dusty Polk&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;SAS Administrator &amp;amp; IT Professional&lt;/em&gt;&lt;/p&gt;

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Dusty Polk</title>
-    <link>https://dustypolk.github.io/pages/</link>
+    <link>https://dustypolk.com/pages/</link>
     <description>Recent content in Pages on Dusty Polk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language><atom:link href="https://dustypolk.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language><atom:link href="https://dustypolk.com/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
-      <link>https://dustypolk.github.io/about/</link>
+      <link>https://dustypolk.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dustypolk.github.io/about/</guid>
+      <guid>https://dustypolk.com/about/</guid>
       
       <description>&lt;h2 id=&#34;the-man-behind-the-screen&#34;&gt;The Man Behind the Screen&lt;/h2&gt;
 &lt;p&gt;Hello there! I&amp;rsquo;m Dusty Polk, a tech enthusiast with an insatiable curiosity for how things work. My journey with technology began in childhood when I would disassemble electronics (with varying success putting them back together). That early fascination evolved into a lifelong passion for building, experimenting, and learning.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dustypolk.github.io/images/profile.jpg&#34; alt=&#34;Dusty Polk&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dustypolk.com/images/profile.jpg&#34; alt=&#34;Dusty Polk&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;life-beyond-the-keyboard&#34;&gt;Life Beyond the Keyboard&lt;/h2&gt;
 &lt;p&gt;When I&amp;rsquo;m not immersed in my latest project, I&amp;rsquo;m a devoted husband and proud dog dad. My amazing wife deserves endless credit for supporting my ever-growing collection of gadgets and half-finished projects. Together with our playful 4-year-old beagle Chewy, we make a happy household where technology and warmth coexist.&lt;/p&gt;</description>
       
@@ -23,10 +23,10 @@
     
     <item>
       <title>Resume</title>
-      <link>https://dustypolk.github.io/resume/</link>
+      <link>https://dustypolk.com/resume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dustypolk.github.io/resume/</guid>
+      <guid>https://dustypolk.com/resume/</guid>
       
       <description>&lt;h1 id=&#34;dusty-polk&#34;&gt;Dusty Polk&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;SAS Administrator &amp;amp; IT Professional&lt;/em&gt;&lt;/p&gt;
