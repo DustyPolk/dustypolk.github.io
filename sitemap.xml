@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dustypolk.com/posts/rpisetup/</loc>
+    <loc>https://dustypolk.com/posts/lamp_setup_rpi/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dustypolk.com/</loc>
@@ -11,7 +11,7 @@
     <loc>https://dustypolk.com/posts/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dustypolk.com/posts/my-first-post/</loc>
+    <loc>https://dustypolk.com/posts/introduction/</loc>
     <lastmod>2025-03-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dustypolk.com/about/</loc>

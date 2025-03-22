@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Create a LAMP Server on Raspberry Pi | Dusty Polk</title>
+<meta property="og:title" content="Create a LAMP Server on Raspberry Pi | Dusty Polk" />
+<meta name="twitter:title" content="Create a LAMP Server on Raspberry Pi | Dusty Polk" />
+<meta itemprop="name" content="Create a LAMP Server on Raspberry Pi | Dusty Polk" />
+<meta name="application-name" content="Create a LAMP Server on Raspberry Pi | Dusty Polk" />
+<meta property="og:site_name" content="Dusty Polk" />
+
+<meta name="description" content="Complete step-by-step guide to creating your own local web development server with Linux, Apache, MySQL, and PHP on an affordable Raspberry Pi.">
+<meta itemprop="description" content="Complete step-by-step guide to creating your own local web development server with Linux, Apache, MySQL, and PHP on an affordable Raspberry Pi." />
+<meta property="og:description" content="Complete step-by-step guide to creating your own local web development server with Linux, Apache, MySQL, and PHP on an affordable Raspberry Pi." />
+<meta name="twitter:description" content="Complete step-by-step guide to creating your own local web development server with Linux, Apache, MySQL, and PHP on an affordable Raspberry Pi." />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="https://dustypolk.com/posts/lamp_setup_rpi/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2025-03-22T00:00:00Z />
+    <meta property="article:published_time" content=2025-03-22T00:00:00Z />
+    <meta property="og:url" content="https://dustypolk.com/posts/lamp_setup_rpi/" />
+
+    
+    <meta property="og:article:author" content="Dusty Polk" />
+    <meta property="article:author" content="Dusty Polk" />
+    <meta name="author" content="Dusty Polk" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Create a LAMP Server on Raspberry Pi",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2025-03-22",
+        "description": "Complete step-by-step guide to creating your own local web development server with Linux, Apache, MySQL, and PHP on an affordable Raspberry Pi.",
+        "wordCount":  930 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2025-03-22",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Dusty Polk"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+    
+    <meta property="og:url" content="https://dustypolk.com/posts/lamp_setup_rpi/">
+  <meta property="og:site_name" content="Dusty Polk">
+  <meta property="og:title" content="Create a LAMP Server on Raspberry Pi">
+  <meta property="og:description" content="Complete step-by-step guide to creating your own local web development server with Linux, Apache, MySQL, and PHP on an affordable Raspberry Pi.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-22T00:00:00+00:00">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Create a LAMP Server on Raspberry Pi">
+  <meta name="twitter:description" content="Complete step-by-step guide to creating your own local web development server with Linux, Apache, MySQL, and PHP on an affordable Raspberry Pi.">
+
+
+    
+
+    <link rel="canonical" href="https://dustypolk.com/posts/lamp_setup_rpi/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://dustypolk.com/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://dustypolk.com/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/resume/">
+                        Resume
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Create a LAMP Server on Raspberry Pi</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2025-03-22T00:00:00&#43;00:00" itemprop="datePublished"> 22 Mar 2025 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-youll-need">What You&rsquo;ll Need</a></li>
+    <li><a href="#the-setup-process">The Setup Process</a>
+      <ul>
+        <li><a href="#step-1-prepare-your-raspberry-pi-os">Step 1: Prepare Your Raspberry Pi OS</a></li>
+        <li><a href="#step-2-update-your-system">Step 2: Update Your System</a></li>
+        <li><a href="#step-3-install-the-apache-web-server">Step 3: Install the Apache Web Server</a></li>
+        <li><a href="#step-4-add-mariadb-mysql-database-server">Step 4: Add MariaDB (MySQL) Database Server</a></li>
+        <li><a href="#step-5-install-php">Step 5: Install PHP</a></li>
+        <li><a href="#step-6-test-your-complete-lamp-stack">Step 6: Test Your Complete LAMP Stack</a></li>
+        <li><a href="#step-7-create-a-user-friendly-development-directory">Step 7: Create a User-Friendly Development Directory</a></li>
+      </ul>
+    </li>
+    <li><a href="#securing-your-server">Securing Your Server</a>
+      <ul>
+        <li><a href="#1-keep-your-system-updated">1. Keep Your System Updated</a></li>
+        <li><a href="#2-hide-server-information">2. Hide Server Information</a></li>
+        <li><a href="#3-clean-up-testing-files">3. Clean Up Testing Files</a></li>
+      </ul>
+    </li>
+    <li><a href="#adding-phpmyadmin-optional">Adding phpMyAdmin (Optional)</a></li>
+    <li><a href="#troubleshooting-guide">Troubleshooting Guide</a>
+      <ul>
+        <li><a href="#apache-not-starting">Apache Not Starting?</a></li>
+        <li><a href="#php-files-downloading-instead-of-running">PHP Files Downloading Instead of Running?</a></li>
+        <li><a href="#permission-problems">Permission Problems?</a></li>
+        <li><a href="#database-connection-issues">Database Connection Issues?</a></li>
+      </ul>
+    </li>
+    <li><a href="#whats-next">What&rsquo;s Next?</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h1 id="setting-up-a-lamp-server-on-raspberry-pi-for-local-development">Setting Up a LAMP Server on Raspberry Pi for Local Development</h1>
+<p><img src="/images/raspberry-pi-lamp.jpg" alt="Raspberry Pi LAMP Server"></p>
+<blockquote>
+<p><strong>TL;DR</strong>: Turn your Raspberry Pi into a powerful local web development server using Linux, Apache, MySQL, and PHP (LAMP stack). Perfect for testing projects before deploying to production.</p></blockquote>
+<p>Have you ever wanted your own web server for testing projects, but didn&rsquo;t want to pay for hosting or run a power-hungry computer 24/7? A Raspberry Pi makes the perfect low-cost, energy-efficient solution!</p>
+<p>In this guide, I&rsquo;ll walk you through transforming a basic Raspberry Pi into a complete LAMP development environment. I&rsquo;ve used this setup for everything from testing WordPress themes to building custom web applications.</p>
+<p>Let&rsquo;s get started!</p>
+<hr>
+<h2 id="what-youll-need">What You&rsquo;ll Need</h2>
+<p>Before diving in, gather these essentials:</p>
+<ul>
+<li><strong>Raspberry Pi</strong> (3B, 4, or newer recommended for better performance)</li>
+<li><strong>MicroSD card</strong> (16GB+ recommended)</li>
+<li><strong>Power supply</strong> matching your Pi model&rsquo;s requirements</li>
+<li><strong>Network connection</strong> (Ethernet preferred for stability, Wi-Fi works too)</li>
+<li><strong>Basic terminal knowledge</strong> (we&rsquo;ll use simple commands)</li>
+<li><strong>Optional</strong>: keyboard, mouse, and monitor (only needed for non-headless setup)</li>
+</ul>
+<p><strong>Time required</strong>: About 1 hour, mostly waiting for installations</p>
+<hr>
+<h2 id="the-setup-process">The Setup Process</h2>
+<h3 id="step-1-prepare-your-raspberry-pi-os">Step 1: Prepare Your Raspberry Pi OS</h3>
+<p>Let&rsquo;s start with a fresh Raspberry Pi OS installation:</p>
+<ol>
+<li>Download the <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> for your operating system</li>
+<li>Insert your microSD card into your computer</li>
+<li>Launch the Raspberry Pi Imager</li>
+<li>Choose <strong>Raspberry Pi OS Lite (64-bit)</strong> for a minimal server installation</li>
+<li>Select your microSD card as the destination</li>
+<li>Click the ⚙️ (gear icon) for advanced options:
+<ul>
+<li>Set a meaningful hostname (e.g., <code>lampserver</code>)</li>
+<li>Enable SSH for remote access</li>
+<li>Configure your Wi-Fi details if needed</li>
+<li>Create your username and password</li>
+</ul>
+</li>
+<li>Click <strong>Write</strong> and wait for the process to complete</li>
+<li>Insert the card into your Pi and power it on</li>
+</ol>
+<blockquote>
+<p>💡 <strong>Pro Tip</strong>: Using Raspberry Pi OS Lite saves precious resources by excluding the desktop environment. Your server doesn&rsquo;t need a GUI!</p></blockquote>
+<h3 id="step-2-update-your-system">Step 2: Update Your System</h3>
+<p>First things first—let&rsquo;s make sure everything&rsquo;s up to date:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt upgrade -y
+</span></span></code></pre></div><p>This might take a few minutes, especially on a fresh installation.</p>
+<h3 id="step-3-install-the-apache-web-server">Step 3: Install the Apache Web Server</h3>
+<p>Apache will handle serving your web pages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install apache2 -y
+</span></span></code></pre></div><p>Once installed, Apache starts automatically. Let&rsquo;s make sure it&rsquo;s running correctly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl status apache2
+</span></span></code></pre></div><p>You should see <code>active (running)</code> in the output.</p>
+<p>To test your web server, open a browser on another device on your network and enter your Pi&rsquo;s IP address. You&rsquo;ll find your IP with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hostname -I
+</span></span></code></pre></div><p>If you see the Apache default page, you&rsquo;re on the right track! 🎉</p>
+<h3 id="step-4-add-mariadb-mysql-database-server">Step 4: Add MariaDB (MySQL) Database Server</h3>
+<p>Next up is our database system:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install mariadb-server -y
+</span></span></code></pre></div><p>After installation, secure it with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mysql_secure_installation
+</span></span></code></pre></div><p>During this security setup:</p>
+<ul>
+<li>Press <strong>ENTER</strong> for the first question (no root password yet)</li>
+<li>Type <strong>Y</strong> to set a root password (choose something strong!)</li>
+<li>Answer <strong>Y</strong> to all remaining security questions</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Important</strong>: Remember your MariaDB root password! You&rsquo;ll need it for database management.</p></blockquote>
+<h3 id="step-5-install-php">Step 5: Install PHP</h3>
+<p>Now for the programming language that powers many websites:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install php libapache2-mod-php php-mysql -y
+</span></span></code></pre></div><p>After installation, restart Apache to integrate with PHP:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart apache2
+</span></span></code></pre></div><h3 id="step-6-test-your-complete-lamp-stack">Step 6: Test Your Complete LAMP Stack</h3>
+<p>Let&rsquo;s verify everything works together. Create a PHP info page:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;&lt;?php phpinfo(); ?&gt;&#34;</span> <span class="p">|</span> sudo tee /var/www/html/info.php
+</span></span></code></pre></div><p>Now visit <code>http://[YOUR-PI-IP-ADDRESS]/info.php</code> in your browser. You should see a detailed page about your PHP configuration.</p>
+<p><img src="/images/php-info-example.jpg" alt="PHP Info Page Example"></p>
+<h3 id="step-7-create-a-user-friendly-development-directory">Step 7: Create a User-Friendly Development Directory</h3>
+<p>For easier file management, let&rsquo;s create a directory in your home folder:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir ~/www
+</span></span><span class="line"><span class="cl">sudo ln -s ~/www /var/www/html/dev
+</span></span><span class="line"><span class="cl">sudo chown -R pi:www-data ~/www
+</span></span><span class="line"><span class="cl">sudo chmod -R <span class="m">750</span> ~/www
+</span></span></code></pre></div><p>Now you can place files in <code>~/www</code> and access them at <code>http://[YOUR-PI-IP-ADDRESS]/dev/</code></p>
+<blockquote>
+<p>💡 <strong>Developer Tip</strong>: This setup lets you edit files in your home directory without needing sudo permissions!</p></blockquote>
+<hr>
+<h2 id="securing-your-server">Securing Your Server</h2>
+<p>Even for local development, basic security is important:</p>
+<h3 id="1-keep-your-system-updated">1. Keep Your System Updated</h3>
+<p>Run this regularly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</span></span></code></pre></div><h3 id="2-hide-server-information">2. Hide Server Information</h3>
+<p>Edit Apache&rsquo;s security configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/apache2/conf-enabled/security.conf
+</span></span></code></pre></div><p>Find and modify these lines:</p>
+<pre tabindex="0"><code>ServerTokens Prod
+ServerSignature Off
+</code></pre><p>Save (Ctrl+O, Enter) and exit (Ctrl+X), then restart Apache:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart apache2
+</span></span></code></pre></div><h3 id="3-clean-up-testing-files">3. Clean Up Testing Files</h3>
+<p>Remove the PHP info file once testing is complete:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo rm /var/www/html/info.php
+</span></span></code></pre></div><hr>
+<h2 id="adding-phpmyadmin-optional">Adding phpMyAdmin (Optional)</h2>
+<p>Want a graphical interface for managing your databases? Install phpMyAdmin:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install phpmyadmin -y
+</span></span></code></pre></div><p>During installation:</p>
+<ul>
+<li>Select <strong>apache2</strong> when prompted</li>
+<li>Choose <strong>Yes</strong> to configure the database</li>
+<li>Enter your MariaDB root password</li>
+<li>Create a strong phpMyAdmin application password</li>
+</ul>
+<p>Access phpMyAdmin at <code>http://[YOUR-PI-IP-ADDRESS]/phpmyadmin</code></p>
+<hr>
+<h2 id="troubleshooting-guide">Troubleshooting Guide</h2>
+<p>Running into issues? Here are quick fixes for common problems:</p>
+<h3 id="apache-not-starting">Apache Not Starting?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl status apache2
+</span></span><span class="line"><span class="cl"><span class="c1"># If there are errors, check the logs:</span>
+</span></span><span class="line"><span class="cl">sudo tail -n <span class="m">50</span> /var/log/apache2/error.log
+</span></span></code></pre></div><h3 id="php-files-downloading-instead-of-running">PHP Files Downloading Instead of Running?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo a2enmod php
+</span></span><span class="line"><span class="cl">sudo systemctl restart apache2
+</span></span></code></pre></div><h3 id="permission-problems">Permission Problems?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chown -R www-data:www-data /var/www/html
+</span></span><span class="line"><span class="cl">sudo chmod -R <span class="m">755</span> /var/www/html
+</span></span></code></pre></div><h3 id="database-connection-issues">Database Connection Issues?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl status mariadb
+</span></span><span class="line"><span class="cl"><span class="c1"># If it&#39;s not running:</span>
+</span></span><span class="line"><span class="cl">sudo systemctl start mariadb
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> mariadb
+</span></span></code></pre></div><hr>
+<h2 id="whats-next">What&rsquo;s Next?</h2>
+<p>Now that you have your LAMP server running, here are some exciting next steps:</p>
+<ul>
+<li><strong>Set up virtual hosts</strong> to run multiple websites</li>
+<li><strong>Implement HTTPS</strong> with a self-signed certificate</li>
+<li><strong>Configure automatic backups</strong> for your databases</li>
+<li><strong>Install Git</strong> for version control of your projects</li>
+<li><strong>Try installing WordPress, Drupal, or other CMS systems</strong></li>
+</ul>
+<p>I&rsquo;ve been using this exact setup for over a year now, and it&rsquo;s been perfect for testing client projects before deploying them to production servers.</p>
+<p>Have you set up a Raspberry Pi LAMP server? What are you building with it? I&rsquo;d love to hear about your projects in the comments!</p>
+<p>Happy coding!</p>
+<hr>
+<p><em>Last updated: March 2025</em></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/DustyPolk" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://bsky.app/profile/dustybytes.bsky.social" target="_blank" rel="noopener noreferrer me"
+    title="Bluesky">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+    d="M11.999,10.236c0.321,-0.524 0.916,-1.507 1.405,-2.376c0.755,-1.344 1.692,-2.852 2.869,-4.028c1.283,-1.281 2.845,-2.171 4.739,-2.171c1.144,-0 1.864,0.585 2.299,1.497c0.486,1.017 0.545,2.551 0.51,3.883c-0.051,1.945 -0.232,3.337 -0.505,4.275c-0.229,0.786 -0.543,1.303 -0.878,1.615c-0.892,0.833 -1.8,1.263 -2.634,1.484c0.029,0.018 0.056,0.036 0.084,0.055c0.528,0.367 0.823,0.79 1.081,1.107c0.648,0.794 0.644,1.795 0.23,2.784c-0.481,1.151 -1.533,2.279 -2.12,2.773c-1.389,1.171 -2.506,1.362 -3.383,1.133c-0.88,-0.23 -1.59,-0.932 -2.156,-1.826c-0.45,-0.71 -0.817,-1.537 -1.176,-2.186c-0.115,-0.208 -0.302,-0.455 -0.406,-0.587c-0.02,0.019 -0.04,0.04 -0.056,0.058c-0.121,0.145 -0.234,0.328 -0.349,0.531c-0.363,0.644 -0.721,1.463 -1.157,2.166c-0.555,0.895 -1.252,1.597 -2.12,1.825c-0.863,0.227 -1.97,0.037 -3.363,-1.136c-0.586,-0.494 -1.638,-1.622 -2.119,-2.773c-0.414,-0.989 -0.418,-1.99 0.229,-2.784c0.258,-0.317 0.554,-0.74 1.082,-1.106c0.027,-0.019 0.055,-0.038 0.084,-0.056c-0.834,-0.221 -1.742,-0.651 -2.634,-1.484c-0.335,-0.312 -0.649,-0.829 -0.878,-1.615c-0.273,-0.938 -0.454,-2.33 -0.505,-4.275c-0.036,-1.332 0.024,-2.866 0.509,-3.883c0.435,-0.912 1.156,-1.497 2.3,-1.497c2.32,0 4.109,1.203 5.494,2.808c1.272,1.474 2.195,3.283 2.9,4.643c0.231,0.447 0.436,0.84 0.624,1.146Zm-0.01,5.653l0.296,0.031l0.271,0.086c0.208,0.088 0.413,0.229 0.607,0.428c0.455,0.467 0.882,1.369 1.36,2.284c0.249,0.477 0.518,0.958 0.841,1.339c0.231,0.274 0.483,0.502 0.805,0.569c0.488,0.103 1.052,-0.157 1.811,-0.797c0.452,-0.38 1.274,-1.239 1.645,-2.126c0.155,-0.371 0.265,-0.75 0.022,-1.048c-0.179,-0.22 -0.366,-0.529 -0.732,-0.783c-0.536,-0.372 -1.356,-0.51 -1.905,-0.654c-0.405,-0.106 -0.715,-0.234 -0.88,-0.355l-0.284,-0.303l-0.135,-0.367l-0.008,-0.211l0.035,-0.196l0.078,-0.195l0.142,-0.209l0.198,-0.181l0.296,-0.154c0.151,-0.055 0.348,-0.092 0.587,-0.104c0.815,-0.042 2.571,0.294 4.235,-1.259c0.171,-0.159 0.288,-0.445 0.404,-0.845c0.246,-0.843 0.391,-2.096 0.438,-3.843c0.024,-0.91 0.026,-1.938 -0.208,-2.738c-0.142,-0.486 -0.367,-0.891 -0.896,-0.891c-1.675,0 -2.974,0.983 -4.031,2.21c-1.179,1.369 -2.058,3.057 -2.752,4.321c-0.483,0.88 -0.902,1.573 -1.25,1.916c-0.088,0.086 -0.174,0.157 -0.257,0.214l-0.221,0.125l-0.228,0.078l-0.267,0.031l-0.274,-0.034l-0.231,-0.083l-0.219,-0.132c-0.081,-0.058 -0.164,-0.131 -0.248,-0.22c-0.327,-0.343 -0.718,-1.037 -1.174,-1.917c-0.654,-1.262 -1.497,-2.948 -2.676,-4.314c-1.067,-1.236 -2.417,-2.217 -4.203,-2.217c-0.53,0 -0.754,0.405 -0.896,0.891c-0.234,0.8 -0.232,1.828 -0.208,2.738c0.046,1.747 0.192,3 0.438,3.843c0.116,0.4 0.233,0.686 0.403,0.845c1.665,1.553 3.421,1.217 4.235,1.259c0.24,0.012 0.437,0.049 0.588,0.104l0.295,0.154l0.199,0.181l0.142,0.209l0.078,0.195l0.035,0.196l-0.009,0.211l-0.135,0.368l-0.283,0.303c-0.165,0.12 -0.476,0.248 -0.88,0.355c-0.549,0.144 -1.369,0.281 -1.905,0.653c-0.366,0.254 -0.554,0.564 -0.732,0.783c-0.243,0.298 -0.133,0.677 0.022,1.048c0.371,0.887 1.193,1.746 1.645,2.127c0.757,0.637 1.311,0.9 1.789,0.8c0.311,-0.066 0.55,-0.29 0.772,-0.557c0.315,-0.381 0.577,-0.86 0.822,-1.337c0.394,-0.763 0.752,-1.521 1.138,-2.01c0.431,-0.544 0.929,-0.815 1.455,-0.815Z" style="fill-rule:nonzero;"/>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2025 Dusty Polk.
+        
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script src="https://dustypolk.com/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
