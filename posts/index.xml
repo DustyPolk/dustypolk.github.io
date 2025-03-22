@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Dusty Polk</title>
-    <link>https://hba.sid.one/posts/</link>
+    <link>https://dustypolk.github.io/posts/</link>
     <description>Recent content in Posts on Dusty Polk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hba.sid.one/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dustypolk.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First blog post</title>
-      <link>https://hba.sid.one/posts/my-first-post/</link>
+      <link>https://dustypolk.github.io/posts/my-first-post/</link>
       <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://hba.sid.one/posts/my-first-post/</guid>
+      <guid>https://dustypolk.github.io/posts/my-first-post/</guid>
       
       <description>&lt;h1 id=&#34;welcome-to-my-corner-of-the-internet&#34;&gt;Welcome to My Corner of the Internet!&lt;/h1&gt;
 &lt;p&gt;Hello there! I&amp;rsquo;m Dusty Polk—a dedicated husband, tech enthusiast, and dog lover. When I&amp;rsquo;m not working on my latest projects, you can find me spending time with my amazing wife or taking our playful 4-year-old beagle, Chewy, for a walk around the neighborhood.&lt;/p&gt;
